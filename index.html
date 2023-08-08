@@ -5,9 +5,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIO - Criar Uma Página Web Utilizando as Tags Aprendidas v1.0</title>
+    <title>DIO - Trabalhando com Formulários em HTML v1.0</title>
  </head>
  <body>
+   <form name="pedido" onsubmit="alert('Pedido sendo processado...')" autocomplete="off" method="post">
+      <h2>Você selecionou: Pizza de Beringela</h2>
+      <p>Quais opcionais você deseja? </p>
+      <input type="checkbox" name="opcional[]" value="queijo"> + Queijo <br>
+      <input type="checkbox" name="opcional[]" value="calabresa"> + Calabresa <br>
+      <input type="checkbox" name="opcional[]" value="beringela"> + Beringelai <br>
+      <input type="checkbox" name="opcional[]" value="cebola"> + Cebola <br>
+      <input type="checkbox" name="opcional[]" value="azeitona"> + Azeitona <br>
+      <input disabled type="checkbox" name="opcional[]" value="linhaca"> + Linhaça <br>
+      <br>
+      <p>Borda Recheada?</p>
+      <input type="radio" name="borda" value="sim"> Sim <br>
+      <input type="radio" name="borda" value="nao"> Nao <br>
+      <br>
+      <p>Bebidas?</p>
+      <input type="radio" name="bebidas" value="suco"> Suco <br>
+      <input type="radio" name="bebidas" value="refrigerante"> Refrigerante <br>
+      <input type="radio" name="bebidas" value="cerveja"> Cerveja <br>
+      <input type="radio" name="bebidas" value="agua"> Água <br>
+      <input type="radio" name="bebidas" value="nenhum"> Nenhum <br>
+      <br><br>
+      Nota sobre o pedido: <br>
+      <textarea rows="10" cols="20"></textarea>
+      <br>
+      <button name="fazerpedido" type="submit">Fazer Pedido</button> 
+      <button name="resetar" onclick="alert('Pronto! Pedido limpo.')" type="reset">Limpar</button>
+      <br><br>
+      <h4>Dúvidas?</h4>
+      <select name="duvidas">
+         <option selected value="">Selecione opção</option>
+         <option value="tempo">Tempo de Entrega</option>
+         <option value="pagamento">Forma de Pagamento</option>
+      </select>
+     
 
+
+   </form>
+   <br>
+   <hr>
+   <br>
+
+   <form name="signup" onsubmit="alert('Enviei o Formulario')" autocomplete="off" method="post" action="#">
+      <h3>Não tem Cadastro?</h3>
+      <p>Basta preencher o formulario abaixo!</p>
+      Nome: <input type="text" name="name"><br >
+      Idade: <input type="number" name="number" min="0" max="99"><br >
+      Nivel: <input type="range" min="0" max="100" value="10"><br>
+      Tema: <input type="color" ><br>
+      Site: <input type="url" ><br>
+      Start: <input type="date" ><br>
+      End: <input type="week"><br>
+      Gift: <input type="month"><br>
+      News?: <input type="checkbox"><br>
+      Aceita Termos? : <input type="radio" name="aceita"  title="Sim">Sim</input> <input type="radio" name="aceita" value="Não">Não</input><br><br>
+      Formulário de Contato by AGENCIA MINF <input type="hidden"><br><br>
+      Enviar arquivo? : <input type="file" multiple><br>
+      <br>
+      Procurar? : <input type="search">
+      <br>
+      Email: <input type="email" name="email"><br >
+      Senha: <input type="password" name="password"> <br >
+      <button type="submit">ENVIAR</button>
+   </form>
  </body>
 </html>
